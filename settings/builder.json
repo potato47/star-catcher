@@ -1,0 +1,28 @@
+{
+  "appKey": "",
+  "appSecret": "",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.star-catcher",
+  "privateKey": "",
+  "renderMode": "0",
+  "startScene": "c84e8e0f-d036-4643-98c1-302def49766d",
+  "title": "star-catcher",
+  "webOrientation": "landscape",
+  "xxteaKey": "d9e12653-3415-43"
+}
