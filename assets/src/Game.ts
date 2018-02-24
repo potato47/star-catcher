@@ -33,6 +33,8 @@ export class Game extends cc.Component {
     public starDuration: number;
     // 当前分数
     private score: number;
+    // 游戏是否结束
+    private isOver: boolean;
 
     protected onLoad() {
         // 获取地平面的 y 轴坐标
@@ -44,6 +46,8 @@ export class Game extends cc.Component {
         this.spawnNewStar();
         // 初始化计分
         this.score = 0;
+        // 初始化状态
+        this.isOver = false;
     }
 
     // 生成一个新的星星
@@ -77,7 +81,7 @@ export class Game extends cc.Component {
     protected update(dt: number) {
         // 每帧更新计时器，超过限度还没有生成新的星星
         // 就会调用游戏失败逻辑
-        if (this.timer > this.starDuration) {
+        if (!this.isOver && this.timer > this.starDuration) {
             this.gameOver();
             return;
         }
@@ -96,6 +100,7 @@ export class Game extends cc.Component {
 
     // gg
     private gameOver() {
+        this.isOver = true;
         this.playerNode.stopAllActions(); //停止 player 节点的跳跃动作
         cc.director.loadScene('game');
     }
